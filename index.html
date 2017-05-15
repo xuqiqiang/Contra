@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>游戏</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<script type="text/javascript" src="./js/lufylegend-1.5.1.min.js"></script>
+<script type="text/javascript" src="./js/Main.js"></script>
+<script type="text/javascript" src="./js/Hero.js"></script> 
+<script type="text/javascript" src="./js/Timer.js"></script> 
+<script type="text/javascript" src="./js/Station.js"></script> 
+<script type="text/javascript" src="./js/Background.js"></script> 
+<script type="text/javascript" src="./js/KeyManager.js"></script> 
+<script type="text/javascript" src="./js/Bullet.js"></script> 
+<script type="text/javascript" src="./js/Enemy.js"></script> 
+<script type="text/javascript" src="./js/Wolf.js"></script> 
+<script type="text/javascript" src="./js/Boss1.js"></script> 
+</head>
+<body>
+<div id="mylegend">loading……</div>
+<script type="text/javascript">
+function doScroll() {
+	if(window.pageYOffset === 0) {
+		window.scrollTo(0, 1);
+	}
+}
+window.onload = function() {
+	setTimeout(doScroll, 100);
+	//初始化
+	init(30,"mylegend",800,600,main,LEvent.INIT);
+
+};
+window.onorientationchange = function() {
+	setTimeout(doScroll, 100);
+};
+window.onresize = function() {
+	setTimeout(doScroll, 100);
+};
+</script>
+</body>
+</html>
